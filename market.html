@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プラグイン マーケットプレイス</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #f4f4f9; }
+        .marketplace-header { text-align: center; margin-bottom: 40px; }
+        .plugin-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .plugin-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .plugin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .plugin-card h3 { color: #333; margin-top: 0; }
+        .plugin-card p { color: #666; font-size: 0.9em; }
+        .plugin-card .details-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .plugin-card .rating { font-size: 1.1em; color: gold; margin-bottom: 10px; }
+        .plugin-card .author { font-size: 0.8em; color: #999; }
+        .search-bar { text-align: center; margin-bottom: 30px; }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="marketplace-header">
+        <h1>プラグイン マーケットプレイス</h1>
+        <p>Minecraft To Goを拡張しましょう</p>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="プラグイン名や機能で検索...">
+    </div>
+
+    <main class="plugin-list">
+
+        <section class="plugin-card">
+            <h3>Minecraft 1.12.2 Add-on for Minecraft To Go</h3>
+            <p>Minecraft To GoでMinecraft 1.12.2を起動する</p>
+            <p class="author">(c) yu.</p>
+            <a href="https://github.com/yu-118/Minecraft-To-Go-Add-ons/releases/download/1.12.2/Minecraft.To.Go.Add-on.1.12.2.zip" class="details-link">ダウンロード &rarr;</a>
+        </section>
+
+        </main>
+
+</body>
+</html>
