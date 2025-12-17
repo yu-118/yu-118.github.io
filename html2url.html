@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>html2url</title>
+	</head>
+	<body>
+		<h1>html2url</h1>
+		<p>this tool converts html to url.</p>
+		<p>input</p>
+		<textarea id="textarea1" cols="45" rows="15"></textarea>
+		<br>
+		<button onclick="e();">convert</button>
+		<br>
+		<p>output</p>
+		<input  id="textbox1" type="text" readonly></input>
+	</body>
+	<script>
+	function e(){
+			document.getElementById('textbox1').value='data:text/html,'+document.getElementById('textarea1').value+'<p>html2url by yu.</p>';
+			alert('complete.');
+		};
+	</script>
+</html>
