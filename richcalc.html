@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Rich Calculator</title>
+    </head>
+    <body>
+        <h2>Rich Calculator</h2>
+        <button onclick="add('1');">1</button>
+        <button onclick="add('2');">2</button>
+        <button onclick="add('3');">3</button>
+        <button onclick="add('+')">+</button>
+        <br>
+        <button onclick="add('4');">4</button>
+        <button onclick="add('5');">5</button>
+        <button onclick="add('6');">6</button>
+        <button onclick="add('-')">-</button>
+        <br>
+        <button onclick="add('7');">7</button>
+        <button onclick="add('8');">8</button>
+        <button onclick="add('9');">9</button>
+        <button onclick="add('*')">*</button>
+        <br>
+        <button onclick="add('0');">0</button>
+        <button onclick="add('.');">.</button>
+        <button onclick="add('/');">/</button>
+        <br>
+        <button onclick="cls();">cls</button>
+        <button onclick="calc();">calcluate</button>
+        <br>
+        <button onclick="add(' ');">space</button>
+        <button onclick="add('if ');">if</button>
+        <button onclick="add('else ');">else</button>
+        <button onclick="add('for ');">for</button>
+        <button onclick="add('var ');">var</button>
+        <button onclick="add('return ');">return</button>
+        <br>
+        <button onclick="add('(');">(</button>
+        <button onclick="add(')');">)</button>
+        <button onclick="add('{');">{</button>
+        <button onclick="add('}');">}</button>
+        <button onclick="add('[');">[</button>
+        <button onclick="add(']');">]</button>
+        <button onclick="add(',');">,</button>
+        <button onclick="add(';');">;</button>
+        <button onclick="add('<');"><</button>
+        <button onclick="add('>');">></button>
+        <button onclick="add('=')">=</button>
+        <button onclick="add('!');">!</button>
+        <button onclick="add('&&');">&&</button>
+        <button onclick="add('||');">||</button>
+        <br>
+        <button onclick="add('Math.');">Math.</button>
+        <button onclick="add('PI');">PI</button>
+        <button onclick="add('sin');">sin</button>
+        <button onclick="add('cos');">cos</button>
+        <button onclick="add('sqrt');">sqrt</button>
+        <button onclick="add('pow');">pow</button>
+        <button onclick="add('floor');">floor</button>
+        <button onclick="add('random');">random</button>
+        <button onclick="add('max');">max</button>
+        <button onclick="add('min');">min</button>
+        <button onclick="add('abs');">abs</button>
+        <button onclick="add('round');">round</button>
+        <button onclick="add('ceil');">ceil</button>
+        <br>
+        <button onclick="add('a');">a</button>
+        <button onclick="add('b');">b</button>
+        <button onclick="add('c');">c</button>
+        <button onclick="add('d');">d</button>
+        <button onclick="add('x');">x</button>
+        <button onclick="add('y');">y</button>
+        <button onclick="add('z');">z</button>
+        <p>formula</p>
+        <p id="ftext">0</p>
+        <button onclick="editf();">edit</button>
+        <p>answer</p>
+        <p id="ans">0</p>
+    </body>
+</html>
+
+<script>
+    var formula = ''
+    function add(number) {
+        formula = formula + number
+        updateText()
+    }
+    function editf(){
+        formula = prompt('Edit formula',formula)
+        updateText()
+    }
+    function calc(){
+        document.getElementById('ans').textContent = eval(formula)
+    }
+    function cls(){
+        formula = ''
+        updateText()
+    }
+    function updateText(){
+        document.getElementById('ftext').textContent = formula
+    }
+</script>
